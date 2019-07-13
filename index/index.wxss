@@ -1,0 +1,110 @@
+.add-resources {
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  display: flex;
+}  
+
+.add-resources view {
+  margin-right: 20rpx;
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12rpx;
+  border: 2rpx solid #efefef;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 22rpx;
+  color: #8c8c8c;
+}
+
+.add-resources image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 24rpx;
+}
+
+
+
+
+/* 底部弹框  */
+
+.dialog_mask {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.dialog_container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.2s ease;
+  z-index: 11;
+  border-top-right-radius: 24rpx;
+  border-top-left-radius: 24rpx;
+}
+
+.dialog_show .dialog_container {
+  transform: translateY(0);
+}
+
+.dialog_show .dialog_mask {
+  display: block;
+}
+
+.dialog_conent {
+  border-top-right-radius: 24rpx;
+  border-top-left-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  background: white;
+  flex-direction: column;
+}
+
+.dialog_conent .select-item {
+  width: 750rpx;
+  padding-top: 36rpx;
+  padding-bottom: 36rpx;
+  font-size: 28rpx;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dialog_conent .fine-line {
+  width: 750rpx;
+  height: 2rpx;
+  background-color: #efefef;
+}
+
+.dialog_conent .bold-line {
+  width: 750rpx;
+  height: 20rpx;
+  background-color: #efefef;
+}
+
+.cancel-btn {
+  padding-top: 46rpx;
+  padding-bottom: 46rpx;
+}
+
+.prompt-text{
+  width: 750rpx;
+  top: -70rpx;
+  text-align: center;
+  position: absolute;
+  font-size: 28rpx;
+  color: #00c8b6;
+}

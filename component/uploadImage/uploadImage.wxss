@@ -1,0 +1,74 @@
+/* component/uploadImage/uploadImage.wxss */
+/* 横向滑动 */
+.resources-scroll-view {
+  /* padding-left: 30rpx; */
+  margin-top: 10rpx;
+  height: 180rpx;
+  white-space: nowrap;
+}
+
+.inline {
+  display: inline-block;
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 10rpx;
+  position: relative;
+}
+
+.resources-view {
+  
+  margin-top: 20rpx;
+  border-radius: 12rpx;
+  overflow: hidden;
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #fff;
+}
+
+.resources-image {
+  background-color: #efefef;
+  width: 160rpx;
+  height: 160rpx;
+}
+
+
+.resources-text {
+  color: #fff;
+  width: 160rpx;
+  border-bottom-left-radius: 12rpx;
+  border-bottom-right-radius: 12rpx;
+  background-color: rgba(0, 200, 182, 0.8);
+  font-size: 20rpx;
+  font-weight: 400;
+  height: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.error-bac{
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.video-icon{
+  position: absolute;
+  height: 55rpx;
+  width: 55rpx;
+  top: calc((100% - 55rpx) / 2);
+  left: calc((100% - 55rpx) / 2);
+}
+
+.resources-close {
+  margin-left: 135rpx;
+  top: 5rpx;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  z-index: 1000;
+}
+
+

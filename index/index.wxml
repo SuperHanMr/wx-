@@ -1,0 +1,24 @@
+<view class='add-resources'>
+  <view bindtap='onClikAddResources' id='image'>
+    <image src='/icon/picupload_icon_show.png'></image>+图片
+  </view>
+  <view bindtap='onClikAddResources' id='video'>
+    <image src='/icon/videoupload_icon_show.png'></image>+视频
+  </view>
+</view>
+
+<uploadImage class="uploadImage"></uploadImage>
+
+<view class="dialog {{ showDialog ? 'dialog_show' : '' }}">
+  <view class="dialog_mask"  bindtap="onClickCancle" />
+  <view class='dialog_container'>
+    <view class='dialog_conent'>
+      <view class='select-item' bindtap='onClikSelectResources' id="{{ typeRes ? 'cameraVideo' : 'cameraImage' }}">{{!typeRes ? '拍摄照片' : '拍摄视频' }}</view>
+      <view class='fine-line'></view>
+      <view class='select-item' bindtap='onClikSelectResources' id="{{ typeRes ? 'albumVideo' : 'albumImage' }}">从手机相册选择</view>
+      <view class='bold-line'></view>
+      <view class='select-item cancel-btn' bindtap="onClickCancle">取消</view>
+    </view>
+    <view class='prompt-text'> {{!typeRes ? '最多只能上传 9 张图片' : '上传视频大小不能超过 20MB' }}</view>
+  </view>
+</view>

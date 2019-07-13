@@ -1,0 +1,23 @@
+<!--component/uploadImage/uploadImage.wxml-->
+<!--选择资源 margin-right: 30rpx; -->
+<scroll-view class='resources-scroll-view' wx:if="{{uploadImageList.length - deleteResNumber}}" scroll-x style="width: 100%;">
+  <block wx:for="{{uploadImageList}}" wx:key="item-key">
+    <view class='inline' bindtap='onCllickLookRes' wx:if="{{item.upload_state != 'upload_delete'}}" data-alpha-beta="{{index}}" style="{{ item.image_first ? 'margin-left: 30rpx;' : item.image_last ? 'margin-right: 0rpx;' : '' }}">
+      <view class='resources-view'>
+        <image class='resources-image' wx:if="{{!item.res_type}}" src="{{item.upload_state == 'upload_success' ? item.local_url : ''}}" mode='aspectFill'></image>
+        <placeholderImage wx:if="{{item.res_type}}" class='resources-image' src="{{item.upload_state == 'upload_success' ? item.url : ''}}" compression='send' mode='aspectFill'></placeholderImage>
+        <view class='resources-text' wx:if="{{!item.res_type && item.upload_state=='upload_success' }}">我是视频</view>
+        <view class='resources-text' wx:if="{{item.res_type && item.image_cover && item.upload_state== 'upload_success'}}">封面</view>
+        <view class='resources-text' wx:if="{{item.res_type && item.upload_state=='upload_success' && !item.image_cover}}">已上传</view>
+        <view class='resources-text' wx:if="{{item.upload_state == 'upload_start'}}">正在上传</view>
+
+        <view class='resources-text error-bac' wx:if="{{item.upload_state == 'upload_error'}}">上传失败</view>
+
+        <image class='video-icon' src='/icon/play_icon_show.png' wx:if="{{!item.res_type}}"></image>
+      </view>
+      <image class='resources-close' catchtap='onClickDeleteRes' src='/icon/del_icon_nor.png' data-alpha-beta="{{index}}"></image>
+    </view>
+  </block>
+</scroll-view>
+
+
